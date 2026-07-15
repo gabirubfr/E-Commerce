@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {UpperCasePipe, CurrencyPipe} from '@angular/common';
+import {PrecoFormatadoPipe} from '../../pipes/preco-formatado-pipe'
+//feat: adiciona função Produto para mostrar produto e preço
 @Component({
   selector: 'app-produto',
-  imports: [],
+  imports: [UpperCasePipe, PrecoFormatadoPipe,],
   templateUrl: './produto.html',
   styleUrl: './produto.css',
 })
 export class Produto {
-  produto = 'Notebook';
-  preco = 5000;
-  mostrarPreco = true;
-  mostrarProduto = true;
+  @Input() nome: string = '';
+  @Input() preco: number = 0;
+  @Output() produtoSelecionado = new EventEmitter<string>()
+  selecionarProduto(){
+    this.produtoSelecionado.emit(this.nome)
+  }
 }
