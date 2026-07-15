@@ -14,4 +14,7 @@ export class ListaProdutos {
     {nome: 'Desktop', preco: 49.99},
     {nome: 'Headset', preco: 299.99}
   ];
+  exibirProduto (nome: string){
+    console.log ('Produto Selecionado: ', nome);
+  }
 }
