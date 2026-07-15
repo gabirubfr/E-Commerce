@@ -2,5 +2,7 @@
     <app-produto
     [nome] = "item.nome"
     [preco] = "item.preco"
-    ></app-produto>
+    (produtoSelecionado)="exibirProduto($event)"
+    >
+    </app-produto>
 }
