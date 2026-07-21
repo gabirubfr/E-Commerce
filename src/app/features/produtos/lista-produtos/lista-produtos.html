@@ -22,7 +22,7 @@ Produto Selecionado:
 <h3>Valor total: {{valorTotal() | precoFormatado}}</h3>
 <p><button (click)="substituirProdutos()">substituirProdutos</button></p>
 <hr>
-<h2>carrinho</h2>
+<h2>Carrinho</h2>
 @for(item of carrinho(); track $index){
     <p>{{item.nome | uppercase}} - {{item.preco | precoFormatado}}</p>
 }
