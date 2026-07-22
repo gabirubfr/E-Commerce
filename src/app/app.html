@@ -8,5 +8,11 @@
     <a routerLink="/carrinho">Carrinho</a>
 </nav>
 <hr />
-
+<button (click)= "login()"> Login </button>
+<button (click)= "logout()"> Logout </button>
+<p>Status:<span [style.color]="usuarioLogado() ? 'green' :  'red' ">
+{{usuarioLogado()? 'Logado' : 'Deslogado'}}
+</span>
+</p>
+<hr>
 <router-outlet></router-outlet>
