@@ -10,7 +10,8 @@
 <hr />
 <button (click)= "login()"> Login </button>
 <button (click)= "logout()"> Logout </button>
-<p>Status:<span [style.color]="usuarioLogado() ? 'green' :  'red' ">
+<p>Status:
+    <span [style.color]="usuarioLogado() ? 'green' :  'red' ">
 {{usuarioLogado()? 'Logado' : 'Deslogado'}}
 </span>
 </p>
